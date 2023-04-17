@@ -1,1 +1,2 @@
-ÀïÃæ°üº¬4¸ö°æ±¾Xposed¿ª·¢¿ò¼Ü°ü£¬£ºXposedBridgeApi-54.jar¡¢XposedBridgeApi-82.jar¡¢XposedBridgeApi-87.jar¡¢XposedBridgeApi-89.jar
+é‡Œé¢åŒ…å«4ä¸ªç‰ˆæœ¬Xposedå¼€å‘æ¡†æ¶åŒ…ï¼Œï¼šXposedBridgeApi-54.jarã€XposedBridgeApi-82.jarã€XposedBridgeApi-87.jarã€XposedBridgeApi-89.jar
+äº’è”ç½‘åº”è¯¥æ˜¯å¼€æºç›¸äº’å­¦ä¹ çš„ï¼
