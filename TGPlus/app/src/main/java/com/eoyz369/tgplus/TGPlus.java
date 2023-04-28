@@ -27,7 +27,6 @@ public class TGPlus implements IXposedHookLoadPackage {
     private static final HashSet<String> PACKAGE_NAMES = new HashSet<>();
 
     // 定义一些常量
-    private static final String TELEGRAM_PACKAGE_NAME = "org.telegram.messenger";
     private static final String MESSAGES_CONTROLLER_CLASS_NAME = "org.telegram.messenger.MessagesController";
     private static final String COMPLETE_READ_TASK_FIELD_NAME = "completeReadTask";
 
