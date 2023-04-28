@@ -23,8 +23,6 @@ public class TGPlus implements IXposedHookLoadPackage {
 
     private static final HashSet<String> PACKAGE_NAMES = new HashSet<>();
 
-
-
     static {
         // 定义一个包名列表，用于过滤目标应用程序
         PACKAGE_NAMES.add("org.telegram.messenger");
@@ -44,7 +42,7 @@ public class TGPlus implements IXposedHookLoadPackage {
 
         // 打印日志信息，显示当前进程是目标应用程序
         XposedBridge.log("【Current process is target app:[ " + packageName + " ]Success！】");
-//        ClassLoader classLoader = lpparam.classLoader;
+        //  ClassLoader classLoader = lpparam.classLoader;
         // 在这里编写你想要执行的代码，例如 hook 某个方法或者修改某个变量等等
         // ...
 
@@ -144,10 +142,6 @@ public class TGPlus implements IXposedHookLoadPackage {
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);
                 param.setResult(null);
-            }
-            @Override
-            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                super.afterHookedMethod(param);
             }
         });
         XposedBridge.log("【 HOOK Telegram Remove read receipts Success！】 ");
