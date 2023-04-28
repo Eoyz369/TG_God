@@ -78,23 +78,24 @@ public class TestHOOk implements IXposedHookLoadPackage {
          *      HOOK 电报 消息被删除
          *      processUpdateArray
          */
-        XposedHelpers.findAndHookMethod("org.telegram.messenger.MessagesController", lpparam.classLoader, "processUpdateArray", ArrayList.class, ArrayList.class, ArrayList.class, boolean.class, int.class, new XC_MethodHook() {
-            @Override
-            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                Class<?> TL_updateDeleteChannelMessages = lpparam.classLoader.loadClass("org.telegram.tgnet.TLRPC$TL_updateDeleteChannelMessages");
-                ArrayList<?> messageArr = (ArrayList<?>) param.args[0];
-                Iterator<?> iterator = messageArr.iterator();
-                while (iterator.hasNext()) {
-                    Object item = iterator.next();
-                    if (item.getClass().equals(TL_updateDeleteChannelMessages)) {
-                        iterator.remove();
-                    }
-                }
-                param.args[0] = messageArr;
-                XposedBridge.log("【HOOK Telegram Message removed！】 ");
-            }
-        });
+       Class<?> tlUpdateDeleteChannelMessages = XposedHelpers.findClass("org.telegram.tgnet.TLRPC$TL_updateDeleteChannelMessages", lpparam.classLoader);
+       Class<?> tlUpdateDeleteMessages = XposedHelpers.findClass("org.telegram.tgnet.TLRPC$TL_updateDeleteMessages", lpparam.classLoader);
 
+        XposedHelpers.findAndHookMethod("org.telegram.messenger.MessagesController", lpparam.classLoader, "processUpdateArray", ArrayList.class, ArrayList.class, ArrayList.class, boolean.class, int.class,
+                new XC_MethodHook() {
+                    @Override
+                    protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                        ArrayList<?> messageArr = (ArrayList<?>) param.args[0];
+                        ArrayList<Object> newMessageArr = new ArrayList<>();
+                        for (Object item : messageArr) {
+                            if (!(item.getClass().equals(tlUpdateDeleteChannelMessages)) && !(item.getClass().equals(tlUpdateDeleteMessages))) {
+                                newMessageArr.add(item);
+                            }
+                        }
+                        param.args[0] = newMessageArr;
+                        XposedBridge.log("【HOOK Telegram Message removed！】 ");
+                    }
+                });
 
 
 
