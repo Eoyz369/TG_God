@@ -45,6 +45,8 @@ public class TestHOOk implements IXposedHookLoadPackage {
         // 在这里编写你想要执行的代码，例如 hook 某个方法或者修改某个变量等等
         // ...
 
+        
+        
         /**
          *     HOOK Telegram Local Premium
          *     HOOK 电报 本地会员
@@ -54,12 +56,13 @@ public class TestHOOk implements IXposedHookLoadPackage {
         XposedHelpers.findAndHookMethod("org.telegram.messenger.UserConfig", lpparam.classLoader, "isPremium", XC_MethodReplacement.returnConstant(true));
         XposedBridge.log("【HOOK Telegram Local Premium Success！】 ");
 
+        
+        
         /**
          *     HOOK Telegram No Screenshots
          *     HOOK 电报 禁止截图
          *     isSecuredNow
          */
-
         XposedHelpers.findAndHookMethod("org.telegram.messenger.FlagSecureReason", lpparam.classLoader, "isSecuredNow", Window.class, new XC_MethodHook() {
             @Override
             protected void afterHookedMethod(XC_MethodHook.MethodHookParam param) throws Throwable {
@@ -68,16 +71,13 @@ public class TestHOOk implements IXposedHookLoadPackage {
             }
         });
 
-
+        
 
         /**
          *      HOOK Telegram Message removed
          *      HOOK 电报 消息被删除
          *      processUpdateArray
          */
-
-
-
         XposedHelpers.findAndHookMethod("org.telegram.messenger.MessagesController", lpparam.classLoader, "processUpdateArray", ArrayList.class, ArrayList.class, ArrayList.class, boolean.class, int.class, new XC_MethodHook() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
