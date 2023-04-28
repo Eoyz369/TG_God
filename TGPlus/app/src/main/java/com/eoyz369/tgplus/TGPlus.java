@@ -1,7 +1,4 @@
 package com.eoyz369.tgplus;
-
-//
-
 // 导入Xposed相关的类
 
 import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
@@ -9,7 +6,6 @@ import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
 import android.app.AndroidAppHelper;
 import android.view.Window;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -26,14 +22,7 @@ public class TGPlus implements IXposedHookLoadPackage {
 
     private static final HashSet<String> PACKAGE_NAMES = new HashSet<>();
 
-    // 定义一些常量
-    private static final String MESSAGES_CONTROLLER_CLASS_NAME = "org.telegram.messenger.MessagesController";
-    private static final String COMPLETE_READ_TASK_FIELD_NAME = "completeReadTask";
 
-    // 定义一些变量
-    private static Class<?> messagesControllerClass; // Telegram客户端的类对象
-    private static Field completeReadTaskField; // completeReadTask字段
-    private static Runnable completeReadTask; // completeReadTask对象
 
     static {
         // 定义一个包名列表，用于过滤目标应用程序
@@ -146,39 +135,20 @@ public class TGPlus implements IXposedHookLoadPackage {
          *     HOOK 电报 删除已读回执
          *     completeReadTask
          */
-        // hook markDialogAsReadInternal方法
-        // 获取Telegram客户端的类对象
-        messagesControllerClass = XposedHelpers.findClass(MESSAGES_CONTROLLER_CLASS_NAME, lpparam.classLoader);
-        // 获取completeReadTask字段
-        completeReadTaskField = XposedHelpers.findField(messagesControllerClass, COMPLETE_READ_TASK_FIELD_NAME);
 
-        // hook Runnable类中的run方法
-        XposedHelpers.findAndHookMethod(
-                Runnable.class,
-                "run",
-                new XC_MethodHook() {
-                    @Override
-                    protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                        // 判断当前应用是否是Telegram客户端，如果不是，就直接返回
-                        if (!lpparam.packageName.equals(TELEGRAM_PACKAGE_NAME)) {
-                            return;
-                        }
-                        // 判断当前的Runnable对象是否是completeReadTask，如果不是，就直接返回
-                        if (completeReadTask == null) {
-                            completeReadTask = (Runnable) completeReadTaskField.get(null);
-                        }
-                        if (param.thisObject != completeReadTask) {
-                            return;
-                        }
-                        // 阻止原方法执行
-                        param.setResult(null);
-                        
-                    }
-                }
-        );
-
-        
-
+        ClassLoader classLoader=lpparam.classLoader;
+        Class ReadTaskClass=classLoader.loadClass("org.telegram.messenger.MessagesController$ReadTask");
+        XposedHelpers.findAndHookMethod("org.telegram.messenger.MessagesController", classLoader, "completeReadTask", ReadTaskClass, new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                super.beforeHookedMethod(param);
+                param.setResult(null);
+            }
+            @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                super.afterHookedMethod(param);
+            }
+        });
         XposedBridge.log("【 HOOK Telegram Remove read receipts Success！】 ");
 
 
@@ -186,8 +156,5 @@ public class TGPlus implements IXposedHookLoadPackage {
 
     }
 }
-
-
-
 
 
