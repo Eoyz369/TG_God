@@ -43,7 +43,7 @@ public class TGPlus implements IXposedHookLoadPackage {
 
         // 打印日志信息，显示当前进程是目标应用程序
         XposedBridge.log("【Current process is target app:[ " + packageName + " ]Success！】");
-//        ClassLoader classLoader = lpparam.classLoader;
+        // ClassLoader classLoader = lpparam.classLoader;
         // 在这里编写你想要执行的代码，例如 hook 某个方法或者修改某个变量等等
         // ...
 
