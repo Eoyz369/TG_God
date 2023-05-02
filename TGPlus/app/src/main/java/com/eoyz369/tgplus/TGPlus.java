@@ -145,6 +145,13 @@ public class TGPlus implements IXposedHookLoadPackage {
             }
         });
         XposedBridge.log("【 HOOK Telegram Remove read receipts Success！】 ");
+        
+         /**
+         *     HOOK Telegram Show USER DC ID.
+         *     HOOK 电报 显示用户 DC ID 信息
+         *     setTextAndValue
+         */
+
 
 
 
