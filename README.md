@@ -7,6 +7,8 @@ HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/APK_HOOK/releas
 [1.1.7] No screenshots|禁止截图  
 [1.0.9] Message removed|消息被删除   
 [1.0.0] Premium|本地会员   
+## [XposedBridgeApi](https://github.com/Eoyz369/APK_HOOK/tree/main/XposedBridgeApi)  
+Xposed开发框架包   
 
 
 ### 访问量
