@@ -2,7 +2,8 @@
 ## [XposedBridgeApi](https://github.com/Eoyz369/APK_HOOK/tree/main/XposedBridgeApi)  
 Xposed开发框架包   
 ## [TGPlus](https://github.com/Eoyz369/APK_HOOK/tree/main/TGPlus)   
-HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/APK_HOOK/releases/tag/TGPlus_2.0.1)   
+HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/APK_HOOK/releases/tag/TGPlus_2.2.5)   
+[2.2.5] Show MsgId|显示信息ID   
 [2.0.1] Reconstruction code logic|重构代码逻辑   
 [1.3.6] Remove read receipts|删除已读回执   
 [1.2.4] Prohibit Copying|禁止复制   
