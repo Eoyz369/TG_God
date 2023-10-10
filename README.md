@@ -12,6 +12,8 @@ HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/APK_HOOK/releas
 [1.0.9] Message removed|消息被删除   
 [1.0.0] Premium|本地会员   
 
+### 开放源代码许可   
+[Telegram](https://github.com/DrKLO/Telegram)   
 
 
 ### 访问量
