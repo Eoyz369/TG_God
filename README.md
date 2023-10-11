@@ -1,6 +1,5 @@
 # APK_HOOK   
-## [XposedBridgeApi](https://github.com/Eoyz369/APK_HOOK/tree/main/XposedBridgeApi)  
-Xposed开发框架包   
+   
 ## [TG-God](https://github.com/Eoyz369/APK_HOOK/tree/main/TG-God)   
 HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/APK_HOOK/releases/tag/TG-God_1.3)    
 [1.3] Fix Bug|修复Bug  
@@ -10,10 +9,11 @@ HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/APK_HOOK/releas
 
 ## [~~TGPlus~~](https://github.com/Eoyz369/APK_HOOK/tree/main/TGPlus)暂停维护      
 
-
+### [XposedBridgeApi](https://github.com/Eoyz369/APK_HOOK/tree/main/XposedBridgeApi)  
+Xposed开发框架包
 
 ### 开放源代码许可   
-[Telegram](https://github.com/DrKLO/Telegram)   
+[Telegram](https://github.com/DrKLO/Telegram)|[XposedBridge](https://github.com/rovo89/XposedBridge)   
 
 
 ### 访问量
