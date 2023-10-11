@@ -8,8 +8,7 @@ HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/APK_HOOK/releas
 [1.1] Anti Revoke|防撤回   
 [1.0] Premium|本地会员   
 
-### [TGPlus](https://github.com/Eoyz369/APK_HOOK/tree/main/TGPlus)   
-暂停维护   
+### [TGPlus](https://github.com/Eoyz369/APK_HOOK/tree/main/TGPlus)暂停维护      
 
 
 
