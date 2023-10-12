@@ -11,26 +11,27 @@ public class SaveMessage {
     public void saveMessage(ClassLoader classLoader) {
 
         XposedHelpers.findAndHookMethod("org.telegram.messenger.MessageObject", classLoader, "canForwardMessage", new XC_MethodHook() {
-            @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                super.beforeHookedMethod(param);
                 param.args[0] = true;
             }
         });
         XposedHelpers.findAndHookMethod("org.telegram.messenger.MessageObject", classLoader, "isSecretMedia", new XC_MethodHook() {
             @Override
-            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+            protected void beforeHookedMethod(MethodHookParam param) {
+//                super.beforeHookedMethod(param);
                 param.args[0] = false;
             }
         });
         XposedHelpers.findAndHookMethod("org.telegram.ui.ChatActivity", classLoader, "hasSelectedNoforwardsMessage", new XC_MethodHook() {
             @Override
-            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+            protected void beforeHookedMethod(MethodHookParam param) {
                 param.args[0] = false;
             }
         });
         XposedHelpers.findAndHookMethod("org.telegram.ui.Components.SharedMediaLayout", classLoader, "hasNoforwardsMessage", new XC_MethodHook() {
             @Override
-            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+            protected void beforeHookedMethod(MethodHookParam param) {
                 param.args[0] = false;
             }
         });
@@ -39,18 +40,15 @@ public class SaveMessage {
 
         XposedHelpers.findAndHookMethod("org.telegram.messenger.MessagesController", classLoader, "isChatNoForwards", classTLRPCChat, new XC_MethodHook() {
             @Override
-            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                // Get the chat object from the parameter
+            protected void beforeHookedMethod(MethodHookParam param) {
                 Object chat = param.args[0];
 
-                // Check if the chat is null or has migrated to another chat
                 if (chat == null || XposedHelpers.getObjectField(chat, "migrated_to") != null) {
                     return;
                 }
-
-                // Get and modify the noforwards field value from the chat object
-                boolean noforwards = XposedHelpers.getBooleanField(chat, "noforwards");
-                noforwards = false; // Set it to false to allow forwarding
+//                XposedHelpers.getBooleanField(chat, "noforwards");
+                boolean noforwards;
+                noforwards = false;
                 XposedHelpers.setBooleanField(chat, "noforwards", noforwards);
             }
         });

@@ -6,8 +6,10 @@ import android.app.AndroidAppHelper;
 import android.text.TextPaint;
 
 import com.eoyz369.tggod.function.AntiRevoke;
+import com.eoyz369.tggod.function.DisableRead;
 import com.eoyz369.tggod.function.LocalPremium;
 import com.eoyz369.tggod.function.SaveMessage;
+import com.eoyz369.tggod.ui.Settings;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -49,19 +51,28 @@ public class MainHook implements IXposedHookLoadPackage {
         ClassLoader classLoader = lpparam.classLoader;
         // 在这里编写你想要执行的代码，例如 hook 某个方法或者修改某个变量等等
         // ...
-
+        Settings uiSettings = new Settings();
         // 创建  类的实例
         LocalPremium localPremium = new LocalPremium();
         AntiRevoke antiRevoke = new AntiRevoke();
         SaveMessage saveMessage = new SaveMessage();
+        DisableRead disableRead = new DisableRead();
+
+
+;
+
 
 
         // 调用  实例的  方法
         localPremium.localPremium(classLoader);
         antiRevoke.antiRevoke(classLoader);
         saveMessage.saveMessage(classLoader);
+        disableRead.disableRead(classLoader);
         // HOOK Telegram Show Msg Id.
-        hookMeasureTime(classLoader);
+//        hookMeasureTime(classLoader);
+
+        uiSettings.uiSettings(classLoader);
+
 
 
     }
