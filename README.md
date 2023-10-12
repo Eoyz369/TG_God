@@ -18,6 +18,6 @@ Xposed开发框架包
 
 
 ### 访问量
-![Visitor Count](https://profile-counter.glitch.me/APK_HOOK/count.svg)
+![Visitor Count](https://profile-counter.glitch.me/TG_God/count.svg)
 
 
