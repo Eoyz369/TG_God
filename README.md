@@ -7,9 +7,7 @@ HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/TG_God/releases
 [1.0] Premium|本地会员   
 
 ## [~~TGPlus~~](https://github.com/Eoyz369/TGPlus)暂停维护      
-
-### [XposedBridgeApi](https://github.com/Eoyz369/TG_God/tree/main/XposedBridgeApi)  
-Xposed开发框架包    
+  
 
 ### 开放源代码许可   
 [Telegram](https://github.com/DrKLO/Telegram)|[XposedBridge](https://github.com/rovo89/XposedBridge)   
