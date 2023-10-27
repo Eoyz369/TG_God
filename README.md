@@ -6,7 +6,6 @@ HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/TG_God/releases
 [1.1] Anti Revoke|防撤回   
 [1.0] Premium|本地会员   
 
-## [~~TGPlus~~](https://github.com/Eoyz369/TGPlus)暂停维护      
   
 
 ### 开放源代码许可   
