@@ -16,3 +16,7 @@ HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/TG_God/releases
 ![Visitor Count](https://profile-counter.glitch.me/TG_God/count.svg)
 
 
+### Star记录
+
+[![Stargazers over time](https://starchart.cc/Eoyz369/TG_God.svg)](https://github.com/Eoyz369/TG_God) 
+
