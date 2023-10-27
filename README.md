@@ -1,5 +1,6 @@
 # TG-God 
-HOOK Telegram APK[***[ Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)   
+#### Telegram|电报 会员｜防撤回   
+HOOK Telegram APK   [***[ Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)   
 [1.4] Disable Read|禁止已读   
 [1.3] Fix Bug|修复Bug  
 [1.2] Save Message|消息转载  
