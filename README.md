@@ -1,5 +1,6 @@
 # TG-God 
-#### Telegram|电报 会员｜防撤回![DUB License](https://img.shields.io/dub/l/TG_God)  
+#### Telegram|电报 会员｜防撤回!![GitHub](https://img.shields.io/github/license/Eoyz369/TG_God)
+    
    
 HOOK Telegram APK   [***[ Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)   
 [1.4] Disable Read|禁止已读   
