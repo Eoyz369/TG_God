@@ -12,7 +12,7 @@ HOOK Telegram APK   [***[ Download ]***](https://github.com/Eoyz369/TG_God/relea
   
 
 ### 开放源代码许可   
-![GitHub](https://img.shields.io/github/license/DrKLO/Telegram)[@Telegram](https://github.com/DrKLO/Telegram)   
+[@Telegram![GitHub](https://img.shields.io/github/license/DrKLO/Telegram)](https://github.com/DrKLO/Telegram)   
   https://img.shields.io/github/license/DrKLO/Telegram
  [@XposedBridge](https://github.com/rovo89/XposedBridge)   
 
