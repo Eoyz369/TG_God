@@ -1,7 +1,8 @@
 # TG-God 
 
 #### Telegram|电报 会员｜防撤回!   
-![GitHub](https://img.shields.io/github/license/Eoyz369/TG_God)[***[ Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)   
+![GitHub](https://img.shields.io/github/license/Eoyz369/TG_God)    
+[***[ 下载 | Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)   
 [1.4] Disable Read|禁止已读   
 [1.3] Fix Bug|修复Bug  
 [1.2] Save Message|消息转载  
