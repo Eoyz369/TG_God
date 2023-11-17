@@ -5,9 +5,9 @@ Local member features, anti-withdrawal support, unlimited copying
 本地会员功能，支持防撤回，无限制复制    
 
 ## installation method   
-[***[ 下载 | Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)    
-Install `LSposed` in the installer `module` to check the `Telegram` that needs to be applied, restart the application to take effect!   
-安装`LSposed`在安装本`module`勾选需要应用的`Telegram`,重启应用即可生效！   
+
+Install `LSposed` in the installer `module`[](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4) to check the `Telegram` that needs to be applied, restart the application to take effect!   
+安装`LSposed`在安装本`module`[Download](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4) 勾选需要应用的`Telegram`,重启应用即可生效！   
 
 
 ## (web counter) hits
