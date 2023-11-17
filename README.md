@@ -26,3 +26,4 @@
 
 [![Stargazers over time](https://starchart.cc/Eoyz369/TG_God.svg)](https://github.com/Eoyz369/TG_God) 
 
+## license
