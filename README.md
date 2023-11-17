@@ -1,21 +1,21 @@
 # TG-God 
 
-#### Telegram|电报 会员｜防撤回!   
+# telegram-module introduction 
+Local member features, anti-withdrawal support, unlimited copying  
+本地会员功能，支持防撤回，无限制复制    
 
-[***[ 下载 | Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)   
-[1.4] Disable Read|禁止已读   
-[1.3] Fix Bug|修复Bug  
-[1.2] Save Message|消息转载  
-[1.1] Anti Revoke|防撤回   
-[1.0] Premium|本地会员   
+## installation method   
+[***[ 下载 | Download ]***](https://github.com/Eoyz369/TG_God/releases/tag/TG-God_1.4)    
+Install `LSposed` in the installer `module` to check the `Telegram` that needs to be applied, restart the application to take effect!   
+安装`LSposed`在安装本`module`勾选需要应用的`Telegram`,重启应用即可生效！   
 
-### 访问量
+
+## (web counter) hits
 ![Visitor Count](https://profile-counter.glitch.me/TG_God/count.svg)
 
 
-### Star记录
-
+## Star Records
 [![Stargazers over time](https://starchart.cc/Eoyz369/TG_God.svg)](https://github.com/Eoyz369/TG_God) 
 
 ## license
-![GitHub](https://img.shields.io/github/license/Eoyz369/TG_God)![GitHub](https://img.shields.io/github/license/DrKLO/Telegram)  
+![GitHub](https://img.shields.io/github/license/Eoyz369/TG_God)
